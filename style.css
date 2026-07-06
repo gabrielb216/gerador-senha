@@ -59,4 +59,46 @@ width: 70%;
     margin: 0 auto;
 }
     
-.parametro
+.parametro{
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px;
+    padding: 24px;
+}
+
+.parametro-titulo{
+    font-family: var(--roboto-mono);
+    font-size: 26px;
+}
+ 
+.parametro-senha_titulo{
+    font-size: 24px;
+}
+
+.parametro-senha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.parametro-senha{
+    width: 50;
+margin: 0 auto;
+}
+
+.parametro-senha_botao{
+    display: flex;
+    justify-content: center;
+}
+
+.parametro-senha_botao[
+
+]
+.parametro-senha_texto{
+
+}
+
+@media screen and (min-width 768px){
+    .parametro-coluna_senha{
+        flex-direction: row;
+    }
+}
