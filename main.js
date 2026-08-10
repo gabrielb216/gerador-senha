@@ -19,4 +19,8 @@ function aumentaTamanho(){
     }
   numeroSenha.textcontent = tamanhoSenha;
 }
-console.log(botoes);
+constc campoSenha = document.querySelector('#campo-senha');
+
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+campoSenha.textcontent = letrasMaiusculas
