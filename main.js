@@ -21,9 +21,15 @@ function aumentaTamanho(){
   numeroSenha.textcontent = tamanhoSenha;
   geraSenha();
 }
-constc campoSenha = document.querySelector('#campo-senha');
+const campoSenha = document.querySelector('#campo-senha');
+const checkbox = document.querySelectorAll('.checkbox');
+
+console.log(checkbox[0]checked);
 
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const letrasMinuscula = 'abcdefghijklmnopqrstuvwxyz';
+const numero = '01232456789';
+const simbolos = '!@#$%*?'
 geraSenha();
 
 function geraSenha(){
