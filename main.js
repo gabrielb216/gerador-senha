@@ -10,7 +10,8 @@ function diminuiTamanho() {
     if (tamanhoSenha > 1) {
     tamanhoSenha = tamanhoSenha-1;     
     }
-    numeroSenha.textcontent = tamanhoSenha
+    numeroSenha.textcontent = tamanhoSenha;
+    geraSenha();
 }
 
 function aumentaTamanho(){
@@ -18,9 +19,22 @@ function aumentaTamanho(){
     tamanhoSenha = tamanhoSenha+1;   
     }
   numeroSenha.textcontent = tamanhoSenha;
+  geraSenha();
 }
 constc campoSenha = document.querySelector('#campo-senha');
 
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+geraSenha();
 
-campoSenha.textcontent = letrasMaiusculas
+function geraSenha(){
+let senha ='';
+  for (let index = 0; index < tamanhoSenha; index++) {
+    let numeroAleatorio = Math.random()*letrasMaiusculas.lenght;
+    numeroAleatorio = Math.floor(numeroAleatorio);
+    senha = senha  + (letrasMaiusculas[numeroAleatorio]);
+  } 
+  campoSenha.value = letrasMaiusculas;
+}
+
+
+c
