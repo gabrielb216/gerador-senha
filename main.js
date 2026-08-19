@@ -37,7 +37,16 @@ let senha ='';
 if (checkbox[0].checked) {
   alfabeto = alfabeto + letrasMaiusculas;
 }
-  console.log(alfabeto);
+if (checkbox[1].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+if (checkbox[2].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+f (checkbox[3].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+  console.log(alfabeto)
   let alfabeto = '';
   for (let index = 0; index < tamanhoSenha; index++) {
     let numeroAleatorio = Math.random()*letrasMaiusculas.lenght;
