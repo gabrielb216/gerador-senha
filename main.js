@@ -35,8 +35,10 @@ geraSenha();
 function geraSenha(){
 let senha ='';
 if (checkbox[0].checked) {
-  
+  alfabeto = alfabeto + letrasMaiusculas;
 }
+  console.log(alfabeto);
+  let alfabeto = '';
   for (let index = 0; index < tamanhoSenha; index++) {
     let numeroAleatorio = Math.random()*letrasMaiusculas.lenght;
     numeroAleatorio = Math.floor(numeroAleatorio);
