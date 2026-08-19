@@ -55,6 +55,3 @@ f (checkbox[3].checked) {
   } 
   campoSenha.value = letrasMaiusculas;
 }
-
-
-c
