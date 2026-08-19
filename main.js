@@ -51,7 +51,7 @@ f (checkbox[3].checked) {
   console.log(alfabeto)
   let alfabeto = '';
   for (let index = 0; index < tamanhoSenha; index++) {
-    let numeroAleatorio = Math.random()*letrasMaiusculas.lenght;
+    let numeroAleatorio = Math.random()*alfabeto.lenght;
     numeroAleatorio = Math.floor(numeroAleatorio);
     senha = senha  + letrasMaiusculas[numeroAleatorio];
   } 
