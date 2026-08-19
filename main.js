@@ -24,7 +24,9 @@ function aumentaTamanho(){
 const campoSenha = document.querySelector('#campo-senha');
 const checkbox = document.querySelectorAll('.checkbox');
 
-console.log(checkbox[0]checked);
+for (i=0; i < checkbox.lenght;i++){
+checkbox[i].onclick = geraSenha;
+}
 
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const letrasMinuscula = 'abcdefghijklmnopqrstuvwxyz';
