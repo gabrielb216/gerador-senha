@@ -34,10 +34,13 @@ geraSenha();
 
 function geraSenha(){
 let senha ='';
+if (checkbox[0].checked) {
+  
+}
   for (let index = 0; index < tamanhoSenha; index++) {
     let numeroAleatorio = Math.random()*letrasMaiusculas.lenght;
     numeroAleatorio = Math.floor(numeroAleatorio);
-    senha = senha  + (letrasMaiusculas[numeroAleatorio]);
+    senha = senha  + letrasMaiusculas[numeroAleatorio];
   } 
   campoSenha.value = letrasMaiusculas;
 }
