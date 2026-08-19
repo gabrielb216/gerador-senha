@@ -1,53 +1,53 @@
+@import url('https://fonts.googleapis.com//css2?family=Roboto&family=Roboto+mono&display=swap');
 
+:root{
+    --branco: White;
+    --cor-de-fundo: #00162E;
+    --fundo-senha: #00244D;
+    --fundo-texto: #001E40;
+    --borda: #0075FF;
+    --roboto: 'Roboto', sans-serif
+    --roboto-mono: 'Roboto Mono', monospace;
+}
 
+{
+font-weight: 400;
+}
 
+body{
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
+}
 
+.titulo-principal{
+    font-family: var(-roboto-mono);
+    font-size: 32px;
+}
 
+.titulo-secundario{
+    font-size: 24px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.conteudo-titulo{
+    text-align: center;
+    margin-top: 80px;
+}
 
 .conteudo-senha{
     margin-top: 80px;
     background: var(--fundo-senha);
     padding: 24px;
-border-bottom:6px solid var(--borda);
+border-bottom: 6px solid var(--borda);
 }
 
 #campo-senha{
-background-color: var(--fundo-senha);
-border: none;
-color: var(--branco);
-font-family: var(--roboto-mono);
-font-size: 40px;
-width: 70%;
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 70%;
 }
 
 #campo-senha:focus{
@@ -56,9 +56,9 @@ width: 70%;
 
 .conteudo{
     max-width: 1200px;
-    margin: 0 auto;
+    margin:0 auto;
 }
-    
+
 .parametro{
     background-color: var(--fundo-texto);
     border: 2px solid var(--borda);
@@ -68,37 +68,94 @@ width: 70%;
 
 .parametro-titulo{
     font-family: var(--roboto-mono);
-    font-size: 26px;
+    font-size: 28px;
 }
- 
-.parametro-senha_titulo{
-    font-size: 24px;
-}
-
-.parametro-senha{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.parametro-senha{
-    width: 50;
-margin: 0 auto;
+.parametro-senha__titulo{
+   font-size: 24px;
 }
 
-.parametro-senha_botao{
-    display: flex;
-    justify-content: center;
+
+.parametro_senha{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
-.parametro-senha_botao[
+.parametro_senha{
+   width: 50%;
+   margin: 0;
+}
 
-]
-.parametro-senha_texto{
+.parametro-senha__botao{
+   display: flex;
+   justify-content: center;
+}
+
+.parametro-senha__botao{
+}
+.parametro-senha__texto{
 
 }
 
-@media screen and (min-width 768px){
-    .parametro-coluna_senha{
-        flex-direction: row;
+@media screen and (min-width: 768px){
+   .parametro-coluna__senha{
+      flex-direction: row;
+   }
+}
+const numeroSenha = document.querySelector('.parametro-senha__texto');
+let tamanhoSenha = 12;
+numeroSenha.textcontent = tamanhoSenha;
+
+const botoes = document.querySelectorAll('.parametro-senha__botao');
+botoes{0}.onlick = diminuiTamanho;
+botoes{1}. onclick = aumentaTamanho;
+
+function diminuiTamanho() {
+    if (tamanhoSenha > 1) {
+    tamanhoSenha = tamanhoSenha-1;     
     }
+    numeroSenha.textcontent = tamanhoSenha;
+    geraSenha();
+}
+
+function aumentaTamanho(){
+    if (tamanhoSenha < 20) {
+    tamanhoSenha = tamanhoSenha+1;   
+    }
+  numeroSenha.textcontent = tamanhoSenha;
+  geraSenha();
+}
+const campoSenha = document.querySelector('#campo-senha');
+const checkbox = document.querySelectorAll('.checkbox');
+
+console.log(checkbox[0]checked);
+
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const letrasMinuscula = 'abcdefghijklmnopqrstuvwxyz';
+const numero = '01232456789';
+const simbolos = '!@#$%*?'
+geraSenha();
+
+function geraSenha(){
+let senha ='';
+if (checkbox[0].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+if (checkbox[1].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+if (checkbox[2].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+f (checkbox[3].checked) {
+  alfabeto = alfabeto + letrasMaiusculas;
+}
+  console.log(alfabeto)
+  let alfabeto = '';
+  for (let index = 0; index < tamanhoSenha; index++) {
+    let numeroAleatorio = Math.random()*letrasMaiusculas.lenght;
+    numeroAleatorio = Math.floor(numeroAleatorio);
+    senha = senha  + letrasMaiusculas[numeroAleatorio];
+  } 
+  campoSenha.value = letrasMaiusculas;
 }
